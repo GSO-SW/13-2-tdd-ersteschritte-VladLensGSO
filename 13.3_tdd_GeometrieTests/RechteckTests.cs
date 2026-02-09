@@ -120,5 +120,21 @@ namespace _13._3_tdd_GeometrieTests // Namenskonvention: <zuTestendesProjekt>Tes
             Assert.AreEqual(breite, r.Breite);
             Assert.AreEqual(hoehe, r.Hoehe);
         }
+
+        [TestMethod]
+        public void RechteckGroeserAlsAndererRecheck()
+        {
+            // Arrange
+            Rechteck r1 = new Rechteck(10,20);
+            Rechteck r2 = new Rechteck(10,10);
+            bool ergebniss;
+
+            // Act
+            ergebniss = r1.PruefeObRechteckGroeserIst(r2);
+
+            // Assert
+            Assert.AreEqual(true, ergebniss);
+        }
+
     }
 }
