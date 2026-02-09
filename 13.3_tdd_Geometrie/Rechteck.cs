@@ -75,5 +75,19 @@ namespace _13._3_tdd_Geometrie
             return breite*hoehe;
         }
 
+        public bool PruefeObRechteckGroeserIst(Rechteck r2)
+        {
+
+            if(Flaeche() > r2.Flaeche())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
+
